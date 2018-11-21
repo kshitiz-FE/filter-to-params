@@ -1,0 +1,51 @@
+{
+    "author": {
+      "name": "Ritesh Kumar",
+      "email": "rkritesh078@gmail.com",
+      "url": "github.com/ritz078/json-to-proptypes"
+    },
+    "ava": {
+      "require": [
+        "babel-register"
+      ],
+      "babel": "inherit"
+    },
+    "bugs": {
+      "url": "https://github.com/housinghq/filter-to-params/issues"
+    },
+    "dependencies": {
+      "just-extend": "^1.1.22",
+      "just-is-empty": "^1.0.1"
+    },
+    "description": "Convert store state to API params",
+    "devDependencies": {
+      "ava": "^0.19.1",
+      "babel-cli": "^6.24.1",
+      "babel-plugin-transform-object-rest-spread": "^6.23.0",
+      "babel-preset-es2015": "^6.24.1",
+      "babel-preset-es2017": "^6.24.1",
+      "babel-register": "^6.24.1",
+      "xo": "^0.18.2"
+    },
+    "engines": {
+      "node": ">=4"
+    },
+    "files": [
+      "dist"
+    ],
+    "homepage": "https://github.com/housinghq/filter-to-params#readme",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "name": "@housing/filter-to-params",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/housinghq/filter-to-params.git"
+    },
+    "scripts": {
+      "build": "babel *.js --out-dir dist",
+      "prepublish": "npm run build",
+      "test": "npm run build && ava"
+    },
+    "version": "0.3.0"
+  }
+  
