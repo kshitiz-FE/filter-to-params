@@ -62,7 +62,11 @@ exports.default = function (fParams) {
 			} else if (key === "builder_id") {
 				// only used in events
 				params.uuid = filteredKeys[key];
-			} else if (key !== "ver") {
+			} 
+			else if (key === "rera") {
+				params.is_rera_verified = filteredKeys[key];
+			}
+			else if (key !== "ver") {
 				params[key] = filteredKeys[key];
 			}
 		}
