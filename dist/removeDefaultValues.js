@@ -5,7 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = removeDefaultValues;
 
-// var _justIsEmpty = require('just-is-empty');
 function isEmpty(obj) {
 	if (obj == null) {
 		return true;

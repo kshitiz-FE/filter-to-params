@@ -13,8 +13,7 @@
       "url": "https://github.com/housinghq/filter-to-params/issues"
     },
     "dependencies": {
-      "just-extend": "^1.1.22",
-      "just-is-empty": "^1.0.1"
+      "just-extend": "^1.1.22"
     },
     "description": "Convert store state to API params",
     "devDependencies": {
