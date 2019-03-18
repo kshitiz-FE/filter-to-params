@@ -5,11 +5,25 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = removeDefaultValues;
 
-var _justIsEmpty = require('just-is-empty');
+function isEmpty(obj) {
+	if (obj == null) {
+		return true;
+	}
 
-var _justIsEmpty2 = _interopRequireDefault(_justIsEmpty);
+	if (obj === 0) {
+		return false
+	}
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	if (Array.isArray(obj)) {
+		return !obj.length;
+	}
+
+	if (typeof obj == 'object') {
+		return !Object.keys(obj).length;
+	}
+
+	return !obj;
+}
 
 var ignoreFilters = ['params', 'secondaryKeys', 'filterReflected', 'currentState'];
 
@@ -32,7 +46,7 @@ function removeDefaultValues(filters) {
 				if (filters[key]) fstr[key] = filters[key];
 			} else if (
 			//eslint-disable-next-line
-			filters.hasOwnProperty(key) && !(ignoreFilters.indexOf(key) >= 0) && !(0, _justIsEmpty2.default)(filters[key])) {
+			filters.hasOwnProperty(key) && !(ignoreFilters.indexOf(key) >= 0) && !(0, isEmpty)(filters[key])) {
 				fstr[key] = filters[key];
 			}
 		}
