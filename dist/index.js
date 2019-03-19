@@ -14,7 +14,7 @@ exports.default = function (fParams) {
 	var secondaryKeys = {};
 	if (filterParams.secondaryKeys) {
 		secondaryKeys = Object.keys(filterParams.secondaryKeys).reduce(function (filteredKeys, key) {
-			if (filterParams.secondaryKeys[key]) {
+			if (filterParams.secondaryKeys[key] != null) {
 				if (typeof filterParams.secondaryKeys[key] === "string") {
 					if (filterParams.secondaryKeys[key].length > 0) {
 						filteredKeys[key] = filterParams.secondaryKeys[key];
