@@ -90,7 +90,8 @@ function getLocation(base, filteredKeys) {
 		est: [],
 		poly: [],
 		uuid: [],
-		bldng: []
+		bldng: [],
+		region_entity_id: []
 	};
 	if (base && base.length) {
 		base.forEach(function (val) {
@@ -103,6 +104,8 @@ function getLocation(base, filteredKeys) {
 				a.city_select_uuid = filteredKeys.city_uuid;
 			} else if (val.type === "BUILDING" && a.bldng.length <= 5) {
 				a.bldng.push(val.uuid);
+			} else if (val.type === "project" && a.region_entity_id.length <= 5) {
+				a.region_entity_id.push(val.uuid);
 			}
 		});
 	}
@@ -111,6 +114,7 @@ function getLocation(base, filteredKeys) {
 	if (!a.poly.length) delete a.poly;
 	if (!a.uuid.length) delete a.uuid;
 	if (!a.bldng.length) delete a.building;
+	if (!a.region_entity_id.length) delete a.region_entity_id;
 
 	return a;
 }
