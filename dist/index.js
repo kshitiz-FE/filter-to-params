@@ -66,6 +66,9 @@ exports.default = function (fParams) {
 			else if (key === "rera") {
 				params.is_rera_verified = filteredKeys[key];
 			}
+			else if (key === "image") {
+				params.has_cover_image = filteredKeys[key];
+			}
 			else if (key !== "ver") {
 				params[key] = filteredKeys[key];
 			}
