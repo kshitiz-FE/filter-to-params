@@ -69,6 +69,9 @@ exports.default = function (fParams) {
 			else if (key === "image") {
 				params.has_cover_image = filteredKeys[key];
 			}
+			else if (key === "property_details") {
+				filteredKeys[key].forEach(item => params[item] = true)
+			}
 			else if (key !== "ver") {
 				params[key] = filteredKeys[key];
 			}
