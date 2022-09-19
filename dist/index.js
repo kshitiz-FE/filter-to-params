@@ -58,7 +58,7 @@ exports.default = function (fParams) {
 			} else if (key === "property") {
 				params.property_type_id = filteredKeys[key];
 			} else if (key === "bathrooms") {
-				params.number_of_toilets = filteredKeys[key];
+				params.min_number_of_toilets = filteredKeys[key];
 			} else if (key === "builder_id") {
 				// only used in events
 				params.uuid = filteredKeys[key];

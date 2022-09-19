@@ -44,6 +44,6 @@
       "prepublish": "npm run build",
       "test": "npm run build && ava"
     },
-    "version": "0.2.4"
+    "version": "0.2.6"
   }
   
